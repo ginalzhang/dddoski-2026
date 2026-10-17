@@ -3,7 +3,7 @@ import type { Comment, Short } from '@/lib/api/types';
 // Seed data for the in-memory mock backend. Real Shorts, with quizzes written
 // from each video's transcript. Remove once the real API is live.
 
-type SeedShort = Omit<Short, 'url' | 'thumbnailUrl' | 'likedByMe'>;
+type SeedShort = Omit<Short, 'url' | 'thumbnailUrl' | 'likedByMe' | 'genre'>;
 
 export type SeedQuiz = {
     videoId: string;
@@ -142,8 +142,28 @@ const shorts: SeedShort[] = [
     },
 ];
 
+export const seedGenres: { id: string; label: string }[] = [
+    { id: 'physics', label: 'Physics' },
+    { id: 'biology', label: 'Biology' },
+    { id: 'engineering', label: 'Engineering' },
+    { id: 'space', label: 'Space' },
+];
+
+const genreOf: Record<string, string> = {
+    '-kwF6M4juiU': 'physics',
+    '0fV8kYoGDNM': 'physics',
+    '2GUah9xHVto': 'physics',
+    '-YWWzPiaJlE': 'biology',
+    '-xdysAIg9k8': 'biology',
+    '5EPPBDdhe6o': 'biology',
+    '3HQkVfZ4DNY': 'engineering',
+    '2_Z7FB3vfFg': 'engineering',
+    '2acc7oyXIZI': 'space',
+};
+
 export const seedShorts: Short[] = shorts.map((s) => ({
     ...s,
+    genre: genreOf[s.id] ?? 'physics',
     url: `https://www.youtube.com/shorts/${s.id}`,
     thumbnailUrl: `https://i.ytimg.com/vi/${s.id}/oardefault.jpg`,
     likedByMe: false,

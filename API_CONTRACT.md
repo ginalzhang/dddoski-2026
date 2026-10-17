@@ -39,7 +39,9 @@ If it's unset, the app runs against an in-memory mock (`lib/api/mock`).
 
 ## Endpoints
 
-### `GET /shorts?cursor=&limit=4` → `FeedPage`
+### `GET /shorts?cursor=&limit=4&genre=` → `FeedPage`
+
+`genre` is optional; when set, only shorts with that `genre` id are returned.
 
 ```json
 {
@@ -69,10 +71,21 @@ If it's unset, the app runs against an in-memory mock (`lib/api/mock`).
 | `channelAvatarUrl` | `channelAvatarUrl` | nullable |
 | `isChannelVerified` | `isChannelVerified` | |
 | `hashtags` | `hashtags` | strings without `#` |
+| `genre` | — | Genre id from `GET /genres` (e.g. `physics`). Assign from hashtags/topic or your own list |
 | `likedByMe` | — | Per-user, from your DB |
 
 Only return shorts that have a quiz. Shorts that are age-restricted or
 members-only (`isAgeRestricted`, `isMembersOnly`) won't embed, so skip those.
+
+### `GET /genres` → `Genre[]`
+
+```json
+[{ "id": "physics", "label": "Physics", "count": 3 }]
+```
+
+Drives the genre chips above the feed. The user's pick is kept in
+`localStorage` and sent as `genre` on `/shorts`. Changing genre only replaces
+the shorts queued *after* the current one, so it can't be used to skip a quiz.
 
 ### `GET /shorts/:id/quiz` → `Quiz`
 

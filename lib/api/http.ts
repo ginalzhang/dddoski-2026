@@ -37,11 +37,13 @@ export function createHttpApi(baseUrl: string): RetentionApi {
     const v = (id: string) => `/shorts/${encodeURIComponent(id)}`;
 
     return {
-        getFeed: ({ cursor, limit = 4 } = {}) => {
+        getFeed: ({ cursor, limit = 4, genre } = {}) => {
             const qs = new URLSearchParams({ limit: String(limit) });
             if (cursor) qs.set('cursor', cursor);
+            if (genre) qs.set('genre', genre);
             return request(`/shorts?${qs}`);
         },
+        getGenres: () => request(`/genres`),
         getQuiz: (id) => request(`${v(id)}/quiz`),
         submitQuizAttempt: (id, body) => request(`${v(id)}/quiz/attempts`, { method: 'POST', body }),
         recordWatch: (id, body) => request(`${v(id)}/watches`, { method: 'POST', body }),
