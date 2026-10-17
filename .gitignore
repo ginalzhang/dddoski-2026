@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+api_token
+.env
+Dockerfile
+docker-compose.yml
+chat.html
+openrouter_token
+AGENTS.md
+.pi/
