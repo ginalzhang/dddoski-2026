@@ -39,6 +39,8 @@ export function Feed() {
     const [failures, setFailures] = React.useState(0);
     const [status, setStatus] = React.useState<PlayerStatus>('loading');
     const [muted, setMuted] = React.useState(false);
+    // Presenter-only fast forward (S). Deliberately left out of the keyboard hints.
+    const [speed, setSpeed] = React.useState(1);
     const [commentsOpen, setCommentsOpen] = React.useState(false);
     const [stats, setStats] = React.useState<UserStats | null>(null);
     const [genres, setGenres] = React.useState<Genre[] | null>(null);
@@ -274,6 +276,9 @@ export function Feed() {
                 e.preventDefault();
                 togglePlay();
                 break;
+            case 's':
+                setSpeed((s) => (s === 1 ? 2 : 1));
+                break;
             case 'm':
                 setMuted((m) => !m);
                 break;
@@ -360,6 +365,7 @@ export function Feed() {
                                         failures={failures}
                                         callout={callout}
                                         muted={muted}
+                                        speed={speed}
                                         status={status}
                                         progress={progress}
                                         playerRef={(handle: ShortPlayerHandle | null) => {
@@ -376,6 +382,11 @@ export function Feed() {
                                         onAutoplayBlocked={() => {
                                             setMuted(true);
                                             scold('Started muted', 'Your browser insisted. Press M to unmute.');
+                                        }}
+                                        onDuration={(d) => {
+                                            const id = current.id;
+                                            const seconds = Math.round(d);
+                                            updateShort(id, (s) => (s.durationSeconds === seconds ? s : { ...s, durationSeconds: seconds }));
                                         }}
                                         onOpenQuiz={() => setPhase('quiz')}
                                     />

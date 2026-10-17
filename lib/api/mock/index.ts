@@ -1,8 +1,10 @@
 import { ApiError, type Comment, type Quiz, type RetentionApi, type Short, type UserStats } from '@/lib/api/types';
-import { seedCommentsFor, seedGenres, seedQuizzes, seedShorts } from '@/lib/api/mock/seed';
+import { genres, quizzes, shorts } from '@/lib/api/mock/data';
+import { seedCommentsFor } from '@/lib/api/mock/seed';
 
-// In-memory stand-in for the real backend. State lives for the lifetime of
-// the tab, and every call waits a little so loading states are visible.
+// The app's data layer. Shorts and quizzes come from data/quizzes.json (see
+// ./data.ts); progress, likes and comments live in memory for the tab's
+// lifetime. Calls wait a little so loading states are visible.
 
 const LATENCY_MS: [number, number] = [180, 520];
 
@@ -28,9 +30,9 @@ type VideoProgress = {
 };
 
 const db = {
-    shorts: new Map<string, Short>(seedShorts.map((s) => [s.id, { ...s }])),
-    order: seedShorts.map((s) => s.id),
-    quizzes: new Map(seedQuizzes.map((q) => [q.videoId, q])),
+    shorts: new Map<string, Short>(shorts.map((s) => [s.id, { ...s }])),
+    order: shorts.map((s) => s.id),
+    quizzes: new Map(quizzes.map((q) => [q.videoId, q])),
     comments: new Map<string, Comment[]>(),
     progress: new Map<string, VideoProgress>(),
     stats: { passed: 0, failed: 0, secondsRewatched: 0, streak: 0 } as UserStats,
@@ -40,6 +42,28 @@ function getShort(videoId: string) {
     const short = db.shorts.get(videoId);
     if (!short) throw new ApiError('NOT_FOUND', `No short with id ${videoId}`, 404);
     return short;
+}
+
+// The data file only has URLs, so title and channel come from YouTube's
+// oEmbed endpoint (CORS-enabled). Cached per video; failures keep placeholders.
+const enriched = new Map<string, Promise<void>>();
+
+function enrichShort(short: Short) {
+    let job = enriched.get(short.id);
+    if (!job) {
+        job = fetch(`https://www.youtube.com/oembed?format=json&url=${encodeURIComponent(short.url)}`, { signal: AbortSignal.timeout(3000) })
+            .then((r) => (r.ok ? r.json() : null))
+            .then((o: { title?: string; author_name?: string; author_url?: string } | null) => {
+                if (!o) return;
+                if (o.title) short.title = o.title;
+                if (o.author_name) short.channelName = o.author_name;
+                const handle = o.author_url?.match(/\/@([^/?#]+)/)?.[1];
+                short.channelUsername = handle ?? o.author_name ?? short.channelUsername;
+            })
+            .catch(() => {});
+        enriched.set(short.id, job);
+    }
+    return job;
 }
 
 function getProgress(videoId: string) {
@@ -66,6 +90,7 @@ export const mockApi: RetentionApi = {
         const order = genre ? db.order.filter((id) => getShort(id).genre === genre) : db.order;
         const start = cursor ? Number(cursor) : 0;
         const ids = order.slice(start, start + limit);
+        await Promise.all(ids.map((id) => enrichShort(getShort(id))));
         const next = start + limit;
         return {
             items: ids.map((id) => ({ ...getShort(id) })),
@@ -75,7 +100,7 @@ export const mockApi: RetentionApi = {
 
     async getGenres() {
         await delay();
-        return seedGenres.map((g) => ({ ...g, count: db.order.filter((id) => getShort(id).genre === g.id).length }));
+        return genres.map((g) => ({ ...g, count: db.order.filter((id) => getShort(id).genre === g.id).length }));
     },
 
     async getQuiz(videoId) {
@@ -125,14 +150,16 @@ export const mockApi: RetentionApi = {
         return {
             correct,
             attemptNumber: progress.attempts,
-            explanation: correct ? seed.explanation : null,
+            explanation: null,
             stats: { ...db.stats },
         };
     },
 
-    async recordWatch(videoId, { completed }) {
+    async recordWatch(videoId, { completed, secondsWatched }) {
         await delay();
-        getShort(videoId);
+        const short = getShort(videoId);
+        // The data file has no durations; the player reports them here.
+        if (secondsWatched > 0) short.durationSeconds = Math.round(secondsWatched);
         if (completed) getProgress(videoId).watchedSinceLastAttempt = true;
     },
 

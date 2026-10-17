@@ -24,6 +24,7 @@ type ShortCardProps = {
     /** How many times this short has been failed. */
     failures: number;
     muted: boolean;
+    speed: number;
     status: PlayerStatus;
     progress: MotionValue<number>;
     playerRef: React.Ref<ShortPlayerHandle>;
@@ -32,6 +33,7 @@ type ShortCardProps = {
     onStatusChange: (s: PlayerStatus) => void;
     onEnded: () => void;
     onAutoplayBlocked: () => void;
+    onDuration: (seconds: number) => void;
     onOpenQuiz: () => void;
     callout: Callout | null;
 };
@@ -48,6 +50,7 @@ export function ShortCard({
     phase,
     failures,
     muted,
+    speed,
     status,
     progress,
     playerRef,
@@ -56,6 +59,7 @@ export function ShortCard({
     onStatusChange,
     onEnded,
     onAutoplayBlocked,
+    onDuration,
     onOpenQuiz,
     callout,
 }: ShortCardProps) {
@@ -69,10 +73,12 @@ export function ShortCard({
                 title={short.title}
                 poster={short.thumbnailUrl}
                 muted={muted}
+                speed={speed}
                 progress={progress}
                 onStatusChange={onStatusChange}
                 onEnded={onEnded}
                 onAutoplayBlocked={onAutoplayBlocked}
+                onDuration={onDuration}
             />
 
             {/* Catches clicks so YouTube's own UI is unreachable (no scrubbing). */}

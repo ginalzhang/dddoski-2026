@@ -181,7 +181,7 @@ export function QuizDialog({ open, short, attempt, watchRecorded, onAnswered, on
                                     <CircleCheckIcon className='text-success' />
                                     <AlertTitle>{verdict}</AlertTitle>
                                     <AlertDescription>
-                                        {result.explanation}
+                                        {result.explanation ?? 'On to the next one.'}
                                         {result.stats.streak > 1 && <span className='block pt-1'>{result.stats.streak} first-try passes in a row.</span>}
                                     </AlertDescription>
                                 </Alert>

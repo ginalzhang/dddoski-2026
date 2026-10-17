@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://www.youtube.com/shorts/r5wkZlsPGMU",
+    "question": "According to the transcript, what does evaluating the definite integral between 2 and 5 under the curve accomplish?",
+    "answer_1": "It finds the area of the yellow region under the curve between x = 2 and x = 5, which comes out to 39.",
+    "answer_2": "It finds the slope of the tangent line to the curve at x = 5, which comes out to 39.",
+    "answer_3": "It finds the average value of the function over the interval, which comes out to 39.",
+    "answer_4": "It finds the maximum height the curve reaches between x = 2 and x = 5, which comes out to 39.",
+    "correct_answer": "It finds the area of the yellow region under the curve between x = 2 and x = 5, which comes out to 39."
+  },
+  {
+    "url": "https://www.youtube.com/shorts/IuqK-rdjalw",
+    "question": "To evaluate the limit of (sin x - x)/x^3 as x approaches 0, L'Hôpital's rule is applied repeatedly. What is the value of this limit?",
+    "answer_1": "1/6",
+    "answer_2": "-1/6",
+    "answer_3": "0",
+    "answer_4": "-1/3",
+    "correct_answer": "-1/6"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/YfgzUsRJuAk",
+    "question": "In the video, the integral of sin(x)/cos³(x) is evaluated using u-substitution with u = cos(x). What is the result?",
+    "answer_1": "(1/2)sec²(x) + C",
+    "answer_2": "-(1/2)csc²(x) + C",
+    "answer_3": "(-1/2)cos²(x) + C",
+    "answer_4": "2sec²(x) + C",
+    "correct_answer": "(1/2)sec²(x) + C"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/R7sUzpskTVo",
+    "question": "According to the Fundamental Theorem of Calculus, why can the definite integral of f(x) from a to b be evaluated using only the endpoints rather than summing infinitely many pieces?",
+    "answer_1": "Because the accumulated area is an antiderivative of f(x), and knowing the area starts at zero when x = a pins down the constant, giving F(b) − F(a)",
+    "answer_2": "Because the definite integral is defined as the average value of f(x) multiplied by the length of the interval from a to b",
+    "answer_3": "Because the constant of integration cancels out when you divide the antiderivative by the width of the interval",
+    "answer_4": "Because antiderivatives are unique, so any single antiderivative evaluated at b automatically equals the accumulated area",
+    "correct_answer": "Because the accumulated area is an antiderivative of f(x), and knowing the area starts at zero when x = a pins down the constant, giving F(b) − F(a)"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/1TObGhenHYI",
+    "question": "For the derivative function f(x) = 12x with integral function G(x) = 6x², what does the Fundamental Theorem of Calculus say about the difference G(b) - G(a) = 48 (from 54 - 6)?",
+    "answer_1": "It equals the area under the derivative function f(x) = 12x between the two limit points x = a and x = b.",
+    "answer_2": "It equals the slope of the integral function G(x) = 6x² at the midpoint between the two limit points.",
+    "answer_3": "It equals the total area under the integral function G(x) = 6x² from x = 0 to x = b.",
+    "answer_4": "It equals the value of the derivative function f(x) = 12x evaluated at the upper limit point x = b.",
+    "correct_answer": "It equals the area under the derivative function f(x) = 12x between the two limit points x = a and x = b."
+  },
+  {
+    "url": "https://www.youtube.com/shorts/PouLXtDstH0",
+    "question": "According to the transcript, which areas of everyday technology rely on calculus concepts like derivatives and integrals?",
+    "answer_1": "Map navigation, battery life estimates, and rocket guidance systems",
+    "answer_2": "Social media feeds, video streaming quality, and password encryption",
+    "answer_3": "Weather forecasting, online shopping recommendations, and spam filters",
+    "answer_4": "Voice assistants, photo editing apps, and wireless charging",
+    "correct_answer": "Map navigation, battery life estimates, and rocket guidance systems"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/DH8KGzJI1_o",
+    "question": "For f(x) = x³ − 3x, setting the derivative to zero gives critical points at x = 1 and x = −1. What determines which one is a minimum?",
+    "answer_1": "The sign of the second derivative (curvature): positive at x = 1 means a minimum",
+    "answer_2": "The sign of the first derivative at x = 0: positive there means a minimum",
+    "answer_3": "The larger value of x, since x = 1 is always the minimum",
+    "answer_4": "The steepness of the first derivative, since the largest slope marks the minimum",
+    "correct_answer": "The sign of the second derivative (curvature): positive at x = 1 means a minimum"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/dAohzcBC32A",
+    "question": "A rational function has vertical asymptotes at x = -1 and x = 3. Near x = -1, the function goes to -infinity from the left and +infinity from the right. Near x = 3, the function goes to +infinity from both the left and the right. What can be concluded about the limits?",
+    "answer_1": "The limit as x approaches -1 does not exist because the left- and right-hand limits differ, while the limit as x approaches 3 is +infinity.",
+    "answer_2": "Both limits exist: the limit as x approaches -1 is -infinity and the limit as x approaches 3 is +infinity.",
+    "answer_3": "Neither limit exists because the function has vertical asymptotes at both x = -1 and x = 3.",
+    "answer_4": "The limit as x approaches -1 is +infinity because the right-hand limit is +infinity, while the limit as x approaches 3 does not exist.",
+    "correct_answer": "The limit as x approaches -1 does not exist because the left- and right-hand limits differ, while the limit as x approaches 3 is +infinity."
+  },
+  {
+    "url": "https://www.youtube.com/shorts/RKtndLRqPfE",
+    "question": "If y = kx, where k is a constant number, what is the derivative dy/dx?",
+    "answer_1": "k",
+    "answer_2": "kx",
+    "answer_3": "x",
+    "answer_4": "k/x",
+    "correct_answer": "k"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/-qBymNQIIvg",
+    "question": "According to the transcript's list of derivatives you must know by heart, what is the derivative of log_e(x) (the natural logarithm of x)?",
+    "answer_1": "1/x",
+    "answer_2": "x/(ln x)",
+    "answer_3": "e^x",
+    "answer_4": "ln(x)/x",
+    "correct_answer": "1/x"
+  }
+]

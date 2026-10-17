@@ -36,6 +36,9 @@ export function GenreBar({ genres, value, onChange, className }: { genres: Genre
         );
     }
 
+    // No genres in the data: nothing to filter by, so stay out of the way.
+    if (genres.length === 0) return null;
+
     const chips = [{ id: null, label: 'All', count: genres.reduce((n, g) => n + g.count, 0) }, ...genres];
 
     return (

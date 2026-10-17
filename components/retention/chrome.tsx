@@ -3,10 +3,9 @@
 import * as React from 'react';
 import { ChevronDownIcon, ChevronUpIcon, LockIcon, MessageCircleIcon, Share2Icon, ThumbsUpIcon } from 'lucide-react';
 
-import { isMockApi, type Short, type UserStats } from '@/lib/api';
+import type { Short, UserStats } from '@/lib/api';
 import { formatCount, formatDuration } from '@/lib/format';
 import { cn } from '@/lib/utils';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Kbd } from '@/components/ui/kbd';
 import { Separator } from '@/components/ui/separator';
@@ -42,11 +41,6 @@ export function StatsHeader({ stats }: { stats: UserStats | null }) {
         <header className='flex h-14 shrink-0 items-center justify-between gap-6 px-6'>
             <div className='flex items-center gap-3'>
                 <Wordmark />
-                {isMockApi && (
-                    <Badge variant='outline' className='max-sm:hidden'>
-                        Mock data
-                    </Badge>
-                )}
             </div>
             <dl className='flex items-center gap-4'>
                 {items.map((item, i) => (

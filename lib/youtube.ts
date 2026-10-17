@@ -13,6 +13,8 @@ export const PlayerState = {
 export interface YTPlayer {
     playVideo(): void;
     pauseVideo(): void;
+    /** Snaps to the nearest supported rate; YouTube tops out at 2. */
+    setPlaybackRate(rate: number): void;
     seekTo(seconds: number, allowSeekAhead: boolean): void;
     mute(): void;
     unMute(): void;
