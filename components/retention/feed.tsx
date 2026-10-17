@@ -12,6 +12,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { toast } from '@/components/ui/toast';
 import { ActionRail, FeedNav, KeyboardHints, StatsHeader } from '@/components/retention/chrome';
 import { CommentsSheet } from '@/components/retention/comments-sheet';
+import { Confetti, makeConfetti, type ConfettiPiece } from '@/components/retention/confetti';
 import { GenreBar, readSavedGenre, saveGenre } from '@/components/retention/genre-bar';
 import { QuizDialog } from '@/components/retention/quiz-dialog';
 import { ShortCard, type Callout, type Phase } from '@/components/retention/short-card';
@@ -23,6 +24,10 @@ const SWIPE_VELOCITY = 600;
 
 // Card size: as tall as the viewport allows (minus header and padding),
 // capped so it stays a phone-sized object on a projector.
+function isDemo() {
+    return typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('demo');
+}
+
 const STAGE_SIZE = 'aspect-[9/16] w-[min(calc((100dvh-8.75rem)*9/16),calc(100vw-7.5rem),30rem)]';
 
 export function Feed() {
@@ -43,6 +48,7 @@ export function Feed() {
     const [speed, setSpeed] = React.useState(1);
     const [commentsOpen, setCommentsOpen] = React.useState(false);
     const [stats, setStats] = React.useState<UserStats | null>(null);
+    const [confetti, setConfetti] = React.useState<ConfettiPiece[]>([]);
     const [genres, setGenres] = React.useState<Genre[] | null>(null);
     const [genre, setGenre] = React.useState<string | null>(null);
     const genreRef = React.useRef<string | null>(null);
@@ -56,6 +62,7 @@ export function Feed() {
     const dragging = React.useRef(false);
     const progress = useMotionValue(0);
     const stageY = useMotionValue(0);
+    const stageX = useMotionValue(0);
 
     const current: Short | undefined = items[index];
     const player = () => (current ? players.current.get(current.id) : undefined);
@@ -165,6 +172,11 @@ export function Feed() {
         animate(stageY, dir * -40, { type: 'spring', bounce: 0, duration: 0.2 }).then(() => animate(stageY, 0, { type: 'spring', bounce: 0.45, duration: 0.55 }));
     }
 
+    function shake() {
+        if (reduceMotion) return;
+        animate(stageX, [0, -18, 16, -12, 9, -5, 0], { duration: 0.45 });
+    }
+
     // ---- flow -------------------------------------------------------------
 
     function goNext() {
@@ -213,7 +225,12 @@ export function Feed() {
 
     function handleAnswered(result: QuizAttemptResult) {
         setStats(result.stats);
-        if (result.correct) setPhase('passed');
+        if (result.correct) {
+            setPhase('passed');
+            setConfetti(makeConfetti());
+        } else {
+            shake();
+        }
     }
 
     function handleRewatch() {
@@ -289,8 +306,9 @@ export function Feed() {
                 setCommentsOpen(true);
                 break;
             case 'e':
-                // Dev-only (Shift+E): jump to the end so you don't have to sit through it.
-                if (e.shiftKey && process.env.NODE_ENV === 'development') player()?.devSkipToEnd();
+                // Shift+E jumps to the end so you don't have to sit through it.
+                // Dev builds, or any build opened with ?demo=1 (for live demos).
+                if (e.shiftKey && (process.env.NODE_ENV === 'development' || isDemo())) player()?.devSkipToEnd();
                 break;
         }
     });
@@ -350,7 +368,7 @@ export function Feed() {
                     <div className='flex items-end gap-4'>
                         <motion.div
                             className={`relative ${STAGE_SIZE}`}
-                            style={{ y: stageY }}
+                            style={{ y: stageY, x: stageX }}
                             drag={overlayOpen ? false : 'y'}
                             dragConstraints={{ top: 0, bottom: 0 }}
                             dragElastic={0.18}
@@ -418,6 +436,7 @@ export function Feed() {
                 <KeyboardHints className='absolute bottom-6 left-6 hidden xl:flex' />
             </main>
 
+            <Confetti pieces={confetti} />
             {current && (
                 <>
                     <QuizDialog
