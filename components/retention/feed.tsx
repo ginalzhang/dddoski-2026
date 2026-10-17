@@ -4,7 +4,7 @@ import * as React from 'react';
 import { animate, AnimatePresence, motion, useMotionValue, useReducedMotion, type PanInfo } from 'motion/react';
 import { RefreshCwIcon, TrophyIcon, WifiOffIcon } from 'lucide-react';
 
-import { api, type QuizAttemptResult, type Short, type UserStats } from '@/lib/api';
+import { api, type Genre, type QuizAttemptResult, type Short, type UserStats } from '@/lib/api';
 import { noGoingBack, pick, tooEarly } from '@/lib/copy';
 import { Button } from '@/components/ui/button';
 import { Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from '@/components/ui/empty';
@@ -12,6 +12,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { toast } from '@/components/ui/toast';
 import { ActionRail, FeedNav, KeyboardHints, StatsHeader } from '@/components/retention/chrome';
 import { CommentsSheet } from '@/components/retention/comments-sheet';
+import { GenreBar, readSavedGenre, saveGenre } from '@/components/retention/genre-bar';
 import { QuizDialog } from '@/components/retention/quiz-dialog';
 import { ShortCard, type Callout, type Phase } from '@/components/retention/short-card';
 import type { PlayerStatus, ShortPlayerHandle } from '@/components/retention/short-player';
@@ -22,7 +23,7 @@ const SWIPE_VELOCITY = 600;
 
 // Card size: as tall as the viewport allows (minus header and padding),
 // capped so it stays a phone-sized object on a projector.
-const STAGE_SIZE = 'aspect-[9/16] w-[min(calc((100dvh-6rem)*9/16),calc(100vw-7.5rem),30rem)]';
+const STAGE_SIZE = 'aspect-[9/16] w-[min(calc((100dvh-8.75rem)*9/16),calc(100vw-7.5rem),30rem)]';
 
 export function Feed() {
     const reduceMotion = useReducedMotion();
@@ -40,6 +41,9 @@ export function Feed() {
     const [muted, setMuted] = React.useState(false);
     const [commentsOpen, setCommentsOpen] = React.useState(false);
     const [stats, setStats] = React.useState<UserStats | null>(null);
+    const [genres, setGenres] = React.useState<Genre[] | null>(null);
+    const [genre, setGenre] = React.useState<string | null>(null);
+    const genreRef = React.useRef<string | null>(null);
 
     const players = React.useRef(new Map<string, ShortPlayerHandle>());
     const requestedPages = React.useRef(new Set<string>());
@@ -59,21 +63,30 @@ export function Feed() {
 
     // Fetches a page. Callers flip the loading flags first (initial state
     // already has `loadingPage: true`), so this only sets state on settle.
+    // Pages are keyed by genre too, and a page that lands after the genre
+    // changed is dropped.
     const fetchPage = React.useCallback((cursor: string | null) => {
-        const key = cursor ?? 'start';
+        const g = genreRef.current;
+        const key = `${g ?? 'all'}:${cursor ?? 'start'}`;
         if (requestedPages.current.has(key)) return;
         requestedPages.current.add(key);
-        api.getFeed({ cursor, limit: PAGE_SIZE })
+        api.getFeed({ cursor, limit: PAGE_SIZE, genre: g })
             .then((page) => {
-                setItems((prev) => [...prev, ...page.items]);
+                if (genreRef.current !== g) return;
+                setItems((prev) => {
+                    const seen = new Set(prev.map((s) => s.id));
+                    return [...prev, ...page.items.filter((s) => !seen.has(s.id))];
+                });
                 setNextCursor(page.nextCursor);
                 setHasMore(page.nextCursor !== null);
             })
             .catch(() => {
                 requestedPages.current.delete(key);
-                setFeedError(true);
+                if (genreRef.current === g) setFeedError(true);
             })
-            .finally(() => setLoadingPage(false));
+            .finally(() => {
+                if (genreRef.current === g) setLoadingPage(false);
+            });
     }, []);
 
     function loadPage(cursor: string | null) {
@@ -83,11 +96,46 @@ export function Feed() {
     }
 
     React.useEffect(() => {
+        // A saved genre that no longer exists falls back to everything.
+        const saved = readSavedGenre();
+        genreRef.current = saved;
         fetchPage(null);
+        api.getGenres()
+            .then((list) => {
+                setGenres(list);
+                if (saved && list.some((g) => g.id === saved)) setGenre(saved);
+                else if (saved) {
+                    saveGenre(null);
+                    genreRef.current = null;
+                    requestedPages.current.clear();
+                    setItems([]);
+                    fetchPage(null);
+                }
+            })
+            .catch(() => setGenres([]));
         api.getStats()
             .then(setStats)
             .catch(() => {});
     }, [fetchPage]);
+
+    // Switching genre only replaces what's queued *after* the current short.
+    // The current one stays put, so you can't dodge a quiz by changing genre.
+    function changeGenre(next: string | null) {
+        genreRef.current = next;
+        setGenre(next);
+        saveGenre(next);
+        requestedPages.current.clear();
+        setItems((list) => list.slice(0, index + 1));
+        setNextCursor(null);
+        setHasMore(true);
+        setLoadingPage(true);
+        setFeedError(false);
+        fetchPage(null);
+        if (current && phase !== 'passed') {
+            const label = next ? (genres?.find((g) => g.id === next)?.label ?? next) : 'Everything';
+            say(`Up next: ${label}`, 'Finish this one first.');
+        }
+    }
 
     function updateShort(id: string, patch: (s: Short) => Short) {
         setItems((list) => list.map((s) => (s.id === id ? patch(s) : s)));
@@ -290,6 +338,7 @@ export function Feed() {
     return (
         <div className='flex h-dvh flex-col overflow-hidden'>
             <StatsHeader stats={stats} />
+            <GenreBar genres={genres} value={genre} onChange={changeGenre} className='shrink-0 justify-center px-6 pb-2' />
 
             <main className='relative flex min-h-0 flex-1 items-center justify-center px-4 pb-6'>
                 {current ? (

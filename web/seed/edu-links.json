@@ -1,0 +1,493 @@
+[
+  {
+    "kind": "edu",
+    "video_id": "bnjKwiUg-kw",
+    "url": "https://www.youtube.com/shorts/bnjKwiUg-kw",
+    "title": "The dynamics of e^(πi)",
+    "topic": "math",
+    "difficulty": 2,
+    "question": "Following the motion of e^(it) around the unit circle, where does e^(πi) land?",
+    "options": [
+      "1",
+      "-1",
+      "i",
+      "π"
+    ],
+    "correct_index": 1,
+    "explanation": "e^(it) moves around the unit circle at unit speed; after time π it has gone half way around, landing on -1.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true
+  },
+  {
+    "kind": "edu",
+    "video_id": "wGffBCfrAsE",
+    "url": "https://www.youtube.com/shorts/wGffBCfrAsE",
+    "title": "100 random chords, how many intersections?",
+    "topic": "math",
+    "difficulty": 3,
+    "question": "On average, how many intersections do 100 random chords of a circle have?",
+    "options": [
+      "100",
+      "4950",
+      "1650",
+      "2475"
+    ],
+    "correct_index": 2,
+    "explanation": "There are 100·99/2 = 4950 pairs of chords and two random chords cross with probability 1/3, so the expected count is 4950/3 = 1650.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "answer derived mathematically; review against video"
+  },
+  {
+    "kind": "edu",
+    "video_id": "t3jZ2xGOvYg",
+    "url": "https://www.youtube.com/shorts/t3jZ2xGOvYg",
+    "title": "The ladybug clock puzzle",
+    "topic": "math",
+    "difficulty": 3,
+    "question": "A ladybug starts at 12 on a clock and randomly steps to a neighbouring number until it has visited every number. What is the probability that 6 is the last number visited?",
+    "options": [
+      "1/2",
+      "1/6",
+      "1/12",
+      "1/11"
+    ],
+    "correct_index": 3,
+    "explanation": "Surprisingly, each of the 11 numbers other than 12 is equally likely to be last, so the probability is 1/11.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true
+  },
+  {
+    "kind": "edu",
+    "video_id": "9s0srZneJ38",
+    "url": "https://www.youtube.com/shorts/9s0srZneJ38",
+    "title": "How Earth's size was computed by Eratosthenes",
+    "topic": "math",
+    "difficulty": 1,
+    "question": "What did Eratosthenes compare to compute the size of the Earth?",
+    "options": [
+      "The shape of Earth's shadow during a lunar eclipse",
+      "The angle of the Sun's shadows at noon in two cities a known distance apart",
+      "How long a ship took to sail around Africa",
+      "The height of mountains seen from the sea"
+    ],
+    "correct_index": 1,
+    "explanation": "The Sun's rays hit Syene and Alexandria at different angles; that angle difference, plus the distance between the cities, gives Earth's circumference.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true
+  },
+  {
+    "kind": "edu",
+    "video_id": "drmphB3rdHY",
+    "url": "https://www.youtube.com/shorts/drmphB3rdHY",
+    "title": "How Aristarchus deduced the distance to the moon",
+    "topic": "math",
+    "difficulty": 2,
+    "question": "What did Aristarchus use to deduce the distance to the Moon?",
+    "options": [
+      "Radar echoes bounced off the Moon",
+      "The parallax of nearby stars",
+      "The size of Earth's shadow on the Moon during a lunar eclipse",
+      "The timing of ocean tides"
+    ],
+    "correct_index": 2,
+    "explanation": "By comparing the size of Earth's shadow on the Moon during a lunar eclipse to the Moon itself, Aristarchus related the Moon's size and distance to Earth's size.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "review against video"
+  },
+  {
+    "kind": "edu",
+    "video_id": "i9CdGc3e7-g",
+    "url": "https://www.youtube.com/shorts/i9CdGc3e7-g",
+    "title": "The Parker Square",
+    "topic": "math",
+    "difficulty": 2,
+    "question": "What is the Parker Square?",
+    "options": [
+      "A proof that every number is a sum of four squares",
+      "An attempt at a 3x3 magic square made of square numbers that doesn't quite work",
+      "A tiling of the plane using squares of different sizes",
+      "A square whose side length is irrational"
+    ],
+    "correct_index": 1,
+    "explanation": "Matt Parker's 3x3 grid of square numbers has rows and columns with equal sums, but one diagonal fails, so it is not a true magic square of squares.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true
+  },
+  {
+    "kind": "edu",
+    "video_id": "Y0O8VKuIEQ4",
+    "url": "https://www.youtube.com/shorts/Y0O8VKuIEQ4",
+    "title": "Pizza proof 0.999... = 1",
+    "topic": "math",
+    "difficulty": 1,
+    "question": "What does the video show that 0.999... (nines repeating forever) equals?",
+    "options": [
+      "Slightly less than 1",
+      "Exactly 1",
+      "0.9",
+      "It is undefined"
+    ],
+    "correct_index": 1,
+    "explanation": "One third is 0.333..., and three thirds of a pizza make the whole pizza, so 0.999... = 3 × 0.333... = 1.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true
+  },
+  {
+    "kind": "edu",
+    "video_id": "C_k02h9AlsY",
+    "url": "https://www.youtube.com/shorts/C_k02h9AlsY",
+    "title": "What does sine actually mean?",
+    "topic": "math",
+    "difficulty": 1,
+    "question": "For a right triangle with angle θ, what is sin(θ)?",
+    "options": [
+      "Adjacent side divided by hypotenuse",
+      "Opposite side divided by hypotenuse",
+      "Opposite side divided by adjacent side",
+      "Hypotenuse divided by opposite side"
+    ],
+    "correct_index": 1,
+    "explanation": "Sine is the ratio opposite/hypotenuse; on a unit circle it is the height (y-coordinate) of the point at angle θ.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "edu",
+    "video_id": "Ug3c8hysszw",
+    "url": "https://www.youtube.com/shorts/Ug3c8hysszw",
+    "title": "Butterfly method for fractions",
+    "topic": "math",
+    "difficulty": 1,
+    "question": "Using the butterfly method, what is 1/2 + 1/3?",
+    "options": [
+      "2/5",
+      "1/6",
+      "3/5",
+      "5/6"
+    ],
+    "correct_index": 3,
+    "explanation": "Cross-multiply for the numerator (1×3 + 2×1 = 5) and multiply the denominators (2×3 = 6): 5/6.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true
+  },
+  {
+    "kind": "edu",
+    "video_id": "0iUuCC3HswA",
+    "url": "https://www.youtube.com/shorts/0iUuCC3HswA",
+    "title": "Secret reason it's called pizza",
+    "topic": "math",
+    "difficulty": 1,
+    "question": "A pizza has radius z and thickness a. What is its volume?",
+    "options": [
+      "pi·z·z·a",
+      "2·pi·z·a",
+      "pi·a·a·z",
+      "z·z·a"
+    ],
+    "correct_index": 0,
+    "explanation": "A pizza is a cylinder: volume = π·r²·h = pi·z·z·a, which spells 'pizza'.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true
+  },
+  {
+    "kind": "edu",
+    "video_id": "DAwVp8QwrCM",
+    "url": "https://www.youtube.com/shorts/DAwVp8QwrCM",
+    "title": "Hardest multiple choice question ever",
+    "topic": "math",
+    "difficulty": 3,
+    "question": "In the self-referential question 'If you choose an answer to this question at random, what is the chance you will be correct?' with options 25%, 50%, 60%, 25%, why is 25% not a consistent answer?",
+    "options": [
+      "Because 60% is the largest option",
+      "Because two options say 25%, so picking 25% at random has a 50% chance",
+      "Because there are only three options",
+      "Because probabilities must be over 50%"
+    ],
+    "correct_index": 1,
+    "explanation": "Two of the four options are 25%, so randomly picking 25% happens half the time, contradicting the 25% claim. Every answer leads to a contradiction.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "edu",
+    "video_id": "PVK6iA3sU70",
+    "url": "https://www.youtube.com/shorts/PVK6iA3sU70",
+    "title": "Coin Tosses, HTT vs TTH",
+    "topic": "math",
+    "difficulty": 3,
+    "question": "Flipping a fair coin repeatedly, which pattern is more likely to appear first: HTT or TTH?",
+    "options": [
+      "HTT",
+      "TTH",
+      "They are equally likely"
+    ],
+    "correct_index": 0,
+    "explanation": "TTH only wins if the first two flips are TT (probability 1/4). Once any H appears first, the first TT that follows completes HTT, so HTT wins 3/4 of the time.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "edu",
+    "video_id": "v1P1X-r0vPQ",
+    "url": "https://www.youtube.com/shorts/v1P1X-r0vPQ",
+    "title": "Ramanujan Nested Radicals",
+    "topic": "math",
+    "difficulty": 2,
+    "question": "What does Ramanujan's nested radical √(1 + 2√(1 + 3√(1 + 4√(1 + ...)))) equal?",
+    "options": [
+      "2",
+      "π",
+      "3",
+      "It diverges to infinity"
+    ],
+    "correct_index": 2,
+    "explanation": "Using n = √(1 + (n-1)(n+1)) repeatedly starting from n = 3, the infinite nested radical equals 3.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true
+  },
+  {
+    "kind": "edu",
+    "video_id": "OgFf_J1CP0g",
+    "url": "https://www.youtube.com/shorts/OgFf_J1CP0g",
+    "title": "How An Infinite Hotel Ran Out Of Room",
+    "topic": "math",
+    "difficulty": 2,
+    "question": "Hilbert's infinite hotel is full. How can it still fit one new guest?",
+    "options": [
+      "It can't; a full hotel is full",
+      "Every guest moves from room n to room n+1, freeing room 1",
+      "The new guest shares room 1",
+      "Every guest moves to room 2n+1"
+    ],
+    "correct_index": 1,
+    "explanation": "Shifting each guest up one room frees room 1 while everyone still has a room. The hotel only 'runs out of room' for uncountably many new guests.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "edu",
+    "video_id": "5U-V0y-fkSw",
+    "url": "https://www.youtube.com/shorts/5U-V0y-fkSw",
+    "title": "It's impossible to choose a number at random",
+    "topic": "math",
+    "difficulty": 3,
+    "question": "Why can't you choose a positive whole number uniformly at random?",
+    "options": [
+      "Computers can't generate big enough numbers",
+      "Equal probabilities for infinitely many numbers can't add up to exactly 1",
+      "Only odd numbers can be chosen randomly",
+      "Because there is a largest whole number"
+    ],
+    "correct_index": 1,
+    "explanation": "If each number had the same probability p, the total would be 0 when p = 0 or infinite when p > 0, never 1.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "edu",
+    "video_id": "1lZpowy21Gc",
+    "url": "https://www.youtube.com/shorts/1lZpowy21Gc",
+    "title": "Incomplete open cubes",
+    "topic": "math",
+    "difficulty": 2,
+    "question": "How many distinct 'incomplete open cubes' did artist Sol LeWitt catalogue?",
+    "options": [
+      "12",
+      "64",
+      "256",
+      "122"
+    ],
+    "correct_index": 3,
+    "explanation": "LeWitt's work shows the 122 distinct ways to remove edges from a cube frame so that what remains is still a connected 3D form (counting rotations as the same).",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "edu",
+    "video_id": "-7etvZSBxlk",
+    "url": "https://www.youtube.com/shorts/-7etvZSBxlk",
+    "title": "Measuring the entropy of English",
+    "topic": "math",
+    "difficulty": 3,
+    "question": "What does measuring the entropy of English estimate?",
+    "options": [
+      "How many words are in the dictionary",
+      "The average number of bits of information each letter carries, given how predictable text is",
+      "How fast people can type",
+      "The number of letters in the alphabet"
+    ],
+    "correct_index": 1,
+    "explanation": "Entropy measures average surprise; because English is predictable, each letter carries far fewer than log2(26) ≈ 4.7 bits.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "edu",
+    "video_id": "M6LUPYsjods",
+    "url": "https://www.youtube.com/shorts/M6LUPYsjods",
+    "title": "Measuring the speed of light using Jupiter's moons",
+    "topic": "science",
+    "difficulty": 2,
+    "question": "How did Jupiter's moons reveal that light has a finite speed?",
+    "options": [
+      "The moons looked bluer when closer to Earth",
+      "The timing of Io's eclipses shifted depending on how far Earth was from Jupiter",
+      "The moons cast shadows on Earth",
+      "Jupiter's moons orbit at the speed of light"
+    ],
+    "correct_index": 1,
+    "explanation": "When Earth was farther from Jupiter, Io's eclipses appeared later, because light needed extra time to cross the extra distance.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true
+  },
+  {
+    "kind": "edu",
+    "video_id": "YP1mMXRCnaI",
+    "url": "https://www.youtube.com/shorts/YP1mMXRCnaI",
+    "title": "Why the ancient Greeks rejected heliocentrism",
+    "topic": "science",
+    "difficulty": 2,
+    "question": "A key reason the ancient Greeks rejected a Sun-centred model is that they observed no...",
+    "options": [
+      "Stellar parallax: shift in the stars' positions over a year",
+      "Phases of the Moon",
+      "Solar eclipses",
+      "Shooting stars"
+    ],
+    "correct_index": 0,
+    "explanation": "If Earth orbited the Sun, nearby stars should shift over a year. The stars are so far away that this parallax was too small for them to see.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "edu",
+    "video_id": "aQwEJKWATlE",
+    "url": "https://www.youtube.com/shorts/aQwEJKWATlE",
+    "title": "How to measure nearby galaxies",
+    "topic": "science",
+    "difficulty": 2,
+    "question": "Which 'standard candle' lets astronomers measure the distance to nearby galaxies?",
+    "options": [
+      "Cepheid variable stars, whose pulsation period reveals their true brightness",
+      "Comets",
+      "The Moon's phases",
+      "Black holes"
+    ],
+    "correct_index": 0,
+    "explanation": "Henrietta Leavitt found that a Cepheid's pulsation period tells you its true brightness; comparing that to its apparent brightness gives its distance.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "edu",
+    "video_id": "6U6Z6pb6ewI",
+    "url": "https://www.youtube.com/shorts/6U6Z6pb6ewI",
+    "title": "When you lose weight where does it go?",
+    "topic": "science",
+    "difficulty": 1,
+    "question": "When you lose fat, where does most of the mass go?",
+    "options": [
+      "It is converted into pure energy",
+      "It turns into muscle",
+      "You breathe it out as carbon dioxide",
+      "It leaves as sweat"
+    ],
+    "correct_index": 2,
+    "explanation": "Fat is broken down into carbon dioxide and water; most of the mass leaves your body as CO2 that you exhale.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true
+  },
+  {
+    "kind": "edu",
+    "video_id": "uPGBcVCrdg8",
+    "url": "https://www.youtube.com/shorts/uPGBcVCrdg8",
+    "title": "Why do these metronomes sync up?",
+    "topic": "science",
+    "difficulty": 2,
+    "question": "Why do metronomes on a shared movable platform end up in sync?",
+    "options": [
+      "They hear each other's ticks",
+      "The movable platform passes tiny pushes between them, coupling their motion",
+      "They are wired together",
+      "Gravity from each metronome pulls the others"
+    ],
+    "correct_index": 1,
+    "explanation": "Each swing nudges the shared base, which nudges the other metronomes; this coupling gradually pulls them into phase.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true
+  },
+  {
+    "kind": "edu",
+    "video_id": "h1YeIE0vEIs",
+    "url": "https://www.youtube.com/shorts/h1YeIE0vEIs",
+    "title": "How does light 'know' the shortest path?",
+    "topic": "science",
+    "difficulty": 3,
+    "question": "What principle says light travels along the path that takes the least time?",
+    "options": [
+      "Newton's third law",
+      "Hooke's law",
+      "Fermat's principle",
+      "Pascal's principle"
+    ],
+    "correct_index": 2,
+    "explanation": "Fermat's principle of least time explains reflection and refraction; quantum mechanics explains it as nearby paths reinforcing while others cancel.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "edu",
+    "video_id": "mHya9J9pkq4",
+    "url": "https://www.youtube.com/shorts/mHya9J9pkq4",
+    "title": "The tragic tale of Guillaume Le Gentil",
+    "topic": "science",
+    "difficulty": 1,
+    "question": "Guillaume Le Gentil travelled to India to observe which rare event, and kept missing it?",
+    "options": [
+      "A total solar eclipse",
+      "The transit of Venus across the Sun",
+      "Halley's comet",
+      "A supernova"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Gentil set out to observe the 1761 transit of Venus, missed it at sea, waited eight years for the 1769 transit, and was clouded out.",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true
+  }
+]

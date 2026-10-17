@@ -22,6 +22,8 @@ export type Short = {
     channelAvatarUrl: string | null;
     isChannelVerified: boolean;
     hashtags: string[];
+    /** Genre id this short is filed under, e.g. "physics". See `Genre`. */
+    genre: string;
     /** Whether the current user has liked this short. */
     likedByMe: boolean;
 };
@@ -30,6 +32,14 @@ export type FeedPage = {
     items: Short[];
     /** Pass back as `cursor` to get the next page. `null` = end of feed. */
     nextCursor: string | null;
+};
+
+export type Genre = {
+    /** Stable id, passed back as `genre` on `getFeed`. */
+    id: string;
+    label: string;
+    /** How many shorts are filed under it. */
+    count: number;
 };
 
 export type QuizOption = {
@@ -105,7 +115,9 @@ export class ApiError extends Error {
 }
 
 export interface RetentionApi {
-    getFeed(params?: { cursor?: string | null; limit?: number }): Promise<FeedPage>;
+    /** `genre` filters the feed to one genre id; omit or `null` for everything. */
+    getFeed(params?: { cursor?: string | null; limit?: number; genre?: string | null }): Promise<FeedPage>;
+    getGenres(): Promise<Genre[]>;
     getQuiz(videoId: string): Promise<Quiz>;
     submitQuizAttempt(videoId: string, body: QuizAttemptRequest): Promise<QuizAttemptResult>;
     recordWatch(videoId: string, body: WatchEvent): Promise<void>;

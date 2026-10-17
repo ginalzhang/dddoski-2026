@@ -1,5 +1,5 @@
 import { ApiError, type Comment, type Quiz, type RetentionApi, type Short, type UserStats } from '@/lib/api/types';
-import { seedCommentsFor, seedQuizzes, seedShorts } from '@/lib/api/mock/seed';
+import { seedCommentsFor, seedGenres, seedQuizzes, seedShorts } from '@/lib/api/mock/seed';
 
 // In-memory stand-in for the real backend. State lives for the lifetime of
 // the tab, and every call waits a little so loading states are visible.
@@ -61,15 +61,21 @@ function getCommentList(videoId: string) {
 }
 
 export const mockApi: RetentionApi = {
-    async getFeed({ cursor, limit = 4 } = {}) {
+    async getFeed({ cursor, limit = 4, genre } = {}) {
         await delay();
+        const order = genre ? db.order.filter((id) => getShort(id).genre === genre) : db.order;
         const start = cursor ? Number(cursor) : 0;
-        const ids = db.order.slice(start, start + limit);
+        const ids = order.slice(start, start + limit);
         const next = start + limit;
         return {
             items: ids.map((id) => ({ ...getShort(id) })),
-            nextCursor: next < db.order.length ? String(next) : null,
+            nextCursor: next < order.length ? String(next) : null,
         };
+    },
+
+    async getGenres() {
+        await delay();
+        return seedGenres.map((g) => ({ ...g, count: db.order.filter((id) => getShort(id).genre === g.id).length }));
     },
 
     async getQuiz(videoId) {

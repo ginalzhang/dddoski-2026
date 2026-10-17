@@ -1,0 +1,170 @@
+[
+  {
+    "kind": "fun",
+    "video_id": "Y8IJi7iP5vk",
+    "url": "https://www.youtube.com/shorts/Y8IJi7iP5vk",
+    "title": "Last To Fall Wins",
+    "topic": "fun",
+    "difficulty": 1,
+    "question": "What decides the winner in this challenge?",
+    "options": [
+      "The last person who doesn't fall",
+      "Whoever finishes a puzzle first",
+      "The fastest runner",
+      "Whoever eats the most"
+    ],
+    "correct_index": 0,
+    "explanation": "Answer based on the Short's title: \"Last To Fall Wins\".",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "fun",
+    "video_id": "LgbyEFILLJI",
+    "url": "https://www.youtube.com/shorts/LgbyEFILLJI",
+    "title": "$1 vs $10,000 Cake",
+    "topic": "fun",
+    "difficulty": 1,
+    "question": "What is the price of the most expensive cake in the video?",
+    "options": [
+      "$100",
+      "$1,000",
+      "$10,000",
+      "$1,000,000"
+    ],
+    "correct_index": 2,
+    "explanation": "Answer based on the Short's title: \"$1 vs $10,000 Cake\".",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "fun",
+    "video_id": "XCGVurja73c",
+    "url": "https://www.youtube.com/shorts/XCGVurja73c",
+    "title": "I Raced The Fastest Man On Earth",
+    "topic": "fun",
+    "difficulty": 1,
+    "question": "Who does MrBeast race in this Short?",
+    "options": [
+      "A cheetah",
+      "The fastest man on Earth",
+      "A Formula 1 car",
+      "His own subscribers"
+    ],
+    "correct_index": 1,
+    "explanation": "Answer based on the Short's title: \"I Raced The Fastest Man On Earth\".",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "fun",
+    "video_id": "vChAJxWIPcw",
+    "url": "https://www.youtube.com/shorts/vChAJxWIPcw",
+    "title": "Impossible Bottle Flip Wall",
+    "topic": "fun",
+    "difficulty": 1,
+    "question": "What are they flipping onto the wall?",
+    "options": [
+      "Bottles",
+      "Pancakes",
+      "Coins",
+      "Phones"
+    ],
+    "correct_index": 0,
+    "explanation": "Answer based on the Short's title: \"Impossible Bottle Flip Wall\".",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "fun",
+    "video_id": "cXahuUOIkjQ",
+    "url": "https://www.youtube.com/shorts/cXahuUOIkjQ",
+    "title": "Don't Break The Glass!",
+    "topic": "fun",
+    "difficulty": 1,
+    "question": "What is the one thing you must not do in this trick shot?",
+    "options": [
+      "Miss the hoop",
+      "Break the glass",
+      "Drop the ball",
+      "Touch the floor"
+    ],
+    "correct_index": 1,
+    "explanation": "Answer based on the Short's title: \"Don't Break The Glass!\".",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "fun",
+    "video_id": "jbvpGSCF-DI",
+    "url": "https://www.youtube.com/shorts/jbvpGSCF-DI",
+    "title": "Worlds largest paper airplane",
+    "topic": "fun",
+    "difficulty": 1,
+    "question": "What record-sized object is featured?",
+    "options": [
+      "A paper boat",
+      "A kite",
+      "A paper airplane",
+      "A balloon"
+    ],
+    "correct_index": 2,
+    "explanation": "Answer based on the Short's title: \"Worlds largest paper airplane\".",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "fun",
+    "video_id": "X0wxLr5W2X8",
+    "url": "https://www.youtube.com/shorts/X0wxLr5W2X8",
+    "title": "Which one is cake?",
+    "topic": "fun",
+    "difficulty": 1,
+    "question": "What are viewers asked to spot?",
+    "options": [
+      "Which object is secretly a cake",
+      "Which person is the magician",
+      "Which cup hides the ball",
+      "Which door is real"
+    ],
+    "correct_index": 0,
+    "explanation": "Answer based on the Short's title: \"Which one is cake?\".",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  },
+  {
+    "kind": "fun",
+    "video_id": "NnvIwG0S8WE",
+    "url": "https://www.youtube.com/shorts/NnvIwG0S8WE",
+    "title": "Tennis Ball Cannon vs Human Strength",
+    "topic": "fun",
+    "difficulty": 1,
+    "question": "What is human strength pitted against?",
+    "options": [
+      "A bowling machine",
+      "A tennis ball cannon",
+      "A water cannon",
+      "A catapult"
+    ],
+    "correct_index": 1,
+    "explanation": "Answer based on the Short's title: \"Tennis Ball Cannon vs Human Strength\".",
+    "active": true,
+    "duration_s": null,
+    "embeddable": true,
+    "comment": "quiz written from title; review"
+  }
+]
