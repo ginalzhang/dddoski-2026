@@ -1,7 +1,6 @@
 [
   {
     "url": "https://www.youtube.com/shorts/r5wkZlsPGMU",
-    "genre": "integrals",
     "question": "According to the transcript, what does evaluating the definite integral between 2 and 5 under the curve accomplish?",
     "answer_1": "It finds the area of the yellow region under the curve between x = 2 and x = 5, which comes out to 39.",
     "answer_2": "It finds the slope of the tangent line to the curve at x = 5, which comes out to 39.",
@@ -11,7 +10,6 @@
   },
   {
     "url": "https://www.youtube.com/shorts/IuqK-rdjalw",
-    "genre": "limits",
     "question": "To evaluate the limit of (sin x - x)/x^3 as x approaches 0, L'Hôpital's rule is applied repeatedly. What is the value of this limit?",
     "answer_1": "1/6",
     "answer_2": "-1/6",
@@ -21,7 +19,6 @@
   },
   {
     "url": "https://www.youtube.com/shorts/YfgzUsRJuAk",
-    "genre": "integrals",
     "question": "In the video, the integral of sin(x)/cos³(x) is evaluated using u-substitution with u = cos(x). What is the result?",
     "answer_1": "(1/2)sec²(x) + C",
     "answer_2": "-(1/2)csc²(x) + C",
@@ -31,7 +28,6 @@
   },
   {
     "url": "https://www.youtube.com/shorts/R7sUzpskTVo",
-    "genre": "integrals",
     "question": "According to the Fundamental Theorem of Calculus, why can the definite integral of f(x) from a to b be evaluated using only the endpoints rather than summing infinitely many pieces?",
     "answer_1": "Because the accumulated area is an antiderivative of f(x), and knowing the area starts at zero when x = a pins down the constant, giving F(b) − F(a)",
     "answer_2": "Because the definite integral is defined as the average value of f(x) multiplied by the length of the interval from a to b",
@@ -41,7 +37,6 @@
   },
   {
     "url": "https://www.youtube.com/shorts/1TObGhenHYI",
-    "genre": "integrals",
     "question": "For the derivative function f(x) = 12x with integral function G(x) = 6x², what does the Fundamental Theorem of Calculus say about the difference G(b) - G(a) = 48 (from 54 - 6)?",
     "answer_1": "It equals the area under the derivative function f(x) = 12x between the two limit points x = a and x = b.",
     "answer_2": "It equals the slope of the integral function G(x) = 6x² at the midpoint between the two limit points.",
@@ -51,7 +46,6 @@
   },
   {
     "url": "https://www.youtube.com/shorts/PouLXtDstH0",
-    "genre": "real world",
     "question": "According to the transcript, which areas of everyday technology rely on calculus concepts like derivatives and integrals?",
     "answer_1": "Map navigation, battery life estimates, and rocket guidance systems",
     "answer_2": "Social media feeds, video streaming quality, and password encryption",
@@ -61,7 +55,6 @@
   },
   {
     "url": "https://www.youtube.com/shorts/DH8KGzJI1_o",
-    "genre": "derivatives",
     "question": "For f(x) = x³ − 3x, setting the derivative to zero gives critical points at x = 1 and x = −1. What determines which one is a minimum?",
     "answer_1": "The sign of the second derivative (curvature): positive at x = 1 means a minimum",
     "answer_2": "The sign of the first derivative at x = 0: positive there means a minimum",
@@ -71,7 +64,6 @@
   },
   {
     "url": "https://www.youtube.com/shorts/dAohzcBC32A",
-    "genre": "limits",
     "question": "A rational function has vertical asymptotes at x = -1 and x = 3. Near x = -1, the function goes to -infinity from the left and +infinity from the right. Near x = 3, the function goes to +infinity from both the left and the right. What can be concluded about the limits?",
     "answer_1": "The limit as x approaches -1 does not exist because the left- and right-hand limits differ, while the limit as x approaches 3 is +infinity.",
     "answer_2": "Both limits exist: the limit as x approaches -1 is -infinity and the limit as x approaches 3 is +infinity.",
@@ -81,7 +73,6 @@
   },
   {
     "url": "https://www.youtube.com/shorts/RKtndLRqPfE",
-    "genre": "derivatives",
     "question": "If y = kx, where k is a constant number, what is the derivative dy/dx?",
     "answer_1": "k",
     "answer_2": "kx",
@@ -91,7 +82,6 @@
   },
   {
     "url": "https://www.youtube.com/shorts/-qBymNQIIvg",
-    "genre": "derivatives",
     "question": "According to the transcript's list of derivatives you must know by heart, what is the derivative of log_e(x) (the natural logarithm of x)?",
     "answer_1": "1/x",
     "answer_2": "x/(ln x)",
