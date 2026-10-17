@@ -1,39 +1,174 @@
 [
   {
-    "url": "https://www.youtube.com/shorts/PouLXtDstH0",
-    "question": "According to the transcript, which areas of everyday technology rely on calculus concepts like derivatives and integrals?",
-    "answer_1": "Map navigation, battery life estimates, and rocket guidance systems",
-    "answer_2": "Social media feeds, video streaming quality, and password encryption",
-    "answer_3": "Weather forecasting, online shopping recommendations, and spam filters",
-    "answer_4": "Voice assistants, photo editing apps, and wireless charging",
-    "correct_answer": "Map navigation, battery life estimates, and rocket guidance systems"
+    "url": "https://www.youtube.com/shorts/V97dQ2k406U",
+    "question": "If Earth suddenly stopped spinning, why would objects on the surface continue to move?",
+    "answer_1": "Because Earth's gravity would immediately reverse their direction of motion",
+    "answer_2": "Because their momentum would keep them moving at Earth's original rotational speed",
+    "answer_3": "Because the atmosphere would push everything along in the same direction",
+    "answer_4": "Because the sudden stop would create a magnetic force dragging objects eastward",
+    "correct_answer": "Because their momentum would keep them moving at Earth's original rotational speed"
   },
   {
-    "url": "https://www.youtube.com/shorts/DH8KGzJI1_o",
-    "question": "For f(x) = x³ − 3x, setting the derivative to zero gives critical points at x = 1 and x = −1. What determines which one is a minimum?",
-    "answer_1": "The sign of the second derivative (curvature): positive at x = 1 means a minimum",
-    "answer_2": "The sign of the first derivative at x = 0: positive there means a minimum",
-    "answer_3": "The larger value of x, since x = 1 is always the minimum",
-    "answer_4": "The steepness of the first derivative, since the largest slope marks the minimum",
-    "correct_answer": "The sign of the second derivative (curvature): positive at x = 1 means a minimum"
+    "url": "https://www.youtube.com/shorts/zoKiA3Cl9Lk",
+    "question": "What is the boiling point of water in Celsius at sea level?",
+    "answer_1": "0°C",
+    "answer_2": "50°C",
+    "answer_3": "100°C",
+    "answer_4": "150°C",
+    "correct_answer": "100°C"
   },
   {
-    "url": "https://www.youtube.com/shorts/-qBymNQIIvg",
-    "question": "According to the transcript's list of derivatives you must know by heart, what is the derivative of log_e(x) (the natural logarithm of x)?",
-    "answer_1": "1/x",
-    "answer_2": "x/(ln x)",
-    "answer_3": "e^x",
-    "answer_4": "ln(x)/x",
-    "correct_answer": "1/x"
+    "url": "https://www.youtube.com/shorts/Y0q-8Lqz59Q",
+    "question": "Even at absolute zero, atoms still retain a tiny amount of motion. According to the transcript, why can't they ever come to a complete stop?",
+    "answer_1": "Absolute zero has not actually been reached in laboratories, so atoms always have some residual heat from their surroundings.",
+    "answer_2": "External forces like cosmic radiation and background heat continuously stir the atoms, keeping them slightly in motion.",
+    "answer_3": "Quantum mechanics forbids a particle from having a perfectly fixed position and zero momentum simultaneously, leaving zero-point energy.",
+    "answer_4": "Atoms gain energy from measuring instruments, since observing them at such low temperatures unavoidably heats them up.",
+    "correct_answer": "Quantum mechanics forbids a particle from having a perfectly fixed position and zero momentum simultaneously, leaving zero-point energy."
   },
   {
-    "url": "https://www.youtube.com/shorts/R7sUzpskTVo",
-    "question": "According to the Fundamental Theorem of Calculus, why can the definite integral of f(x) from a to b be evaluated using only the endpoints rather than summing infinitely many pieces?",
-    "answer_1": "Because the accumulated area is an antiderivative of f(x), and knowing the area starts at zero when x = a pins down the constant, giving F(b) − F(a)",
-    "answer_2": "Because the definite integral is defined as the average value of f(x) multiplied by the length of the interval from a to b",
-    "answer_3": "Because the constant of integration cancels out when you divide the antiderivative by the width of the interval",
-    "answer_4": "Because antiderivatives are unique, so any single antiderivative evaluated at b automatically equals the accumulated area",
-    "correct_answer": "Because the accumulated area is an antiderivative of f(x), and knowing the area starts at zero when x = a pins down the constant, giving F(b) − F(a)"
+    "url": "https://www.youtube.com/shorts/bx-uEq-SbJs",
+    "question": "A block has a mass of 200 g and a volume of 100 cm³. What is its density?",
+    "answer_1": "2 g/cm³",
+    "answer_2": "0.5 g/cm³",
+    "answer_3": "20 g/cm³",
+    "answer_4": "200 g/cm³",
+    "correct_answer": "2 g/cm³"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/0GIkKW2xH1E",
+    "question": "Sound cannot travel through which type of medium?",
+    "answer_1": "Solid",
+    "answer_2": "Liquid",
+    "answer_3": "Gas",
+    "answer_4": "Vacuum",
+    "correct_answer": "Vacuum"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/zBwbCuMXwWo",
+    "question": "In an experiment to compare materials, which quantity is calculated by dividing an object's mass by its volume?",
+    "answer_1": "Pressure",
+    "answer_2": "Density",
+    "answer_3": "Weight",
+    "answer_4": "Acceleration",
+    "correct_answer": "Density"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/JhHxa0YJbZs",
+    "question": "What does the concept of matter waves describe?",
+    "answer_1": "That particles such as electrons can exhibit wave-like behavior",
+    "answer_2": "That sound waves can carry solid matter over long distances",
+    "answer_3": "That matter is made of tiny interconnected springs that vibrate",
+    "answer_4": "That waves in the ocean are caused by the pull of matter on the Moon",
+    "correct_answer": "That particles such as electrons can exhibit wave-like behavior"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/P0eykJhZc_M",
+    "question": "A sealed tire is heated so its temperature rises, with its volume staying roughly constant and no air added. Why does the pressure inside increase?",
+    "answer_1": "The air particles move faster, colliding with the tire wall more often and with greater force, so the force per unit area on the wall increases.",
+    "answer_2": "The heated air particles expand in size, taking up more of the tire's volume and pushing the walls outward more strongly.",
+    "answer_3": "Heating causes extra air particles to be generated inside the tire, and the larger number of particles raises the pressure.",
+    "answer_4": "The heat softens the tire walls, allowing the trapped air to occupy a larger volume, which directly raises the pressure.",
+    "correct_answer": "The air particles move faster, colliding with the tire wall more often and with greater force, so the force per unit area on the wall increases."
+  },
+  {
+    "url": "https://www.youtube.com/shorts/pORcPTOpHUs",
+    "question": "An object moving in a straight line at constant speed has zero acceleration. According to Newton's first law, what is the net force acting on it?",
+    "answer_1": "Zero net force",
+    "answer_2": "A constant nonzero net force in the direction of motion",
+    "answer_3": "A net force equal to its mass times its speed",
+    "answer_4": "A net force that decreases with time",
+    "correct_answer": "Zero net force"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/qDvc9T4UjGc",
+    "question": "For a galvanic cell, what does the relationship ΔG° = −nFE° imply about a reaction with a positive standard cell potential (E° > 0)?",
+    "answer_1": "The free-energy change is negative (ΔG° < 0), so the reaction is thermodynamically favorable.",
+    "answer_2": "The free-energy change is positive (ΔG° > 0), so the reaction is thermodynamically unfavorable.",
+    "answer_3": "The reaction must be very fast, since a positive cell potential indicates a high reaction rate.",
+    "answer_4": "The reaction has ΔG° = 0, so the cell is at equilibrium and produces no electrical work.",
+    "correct_answer": "The free-energy change is negative (ΔG° < 0), so the reaction is thermodynamically favorable."
+  },
+  {
+    "url": "https://www.youtube.com/shorts/f7y--CNcn1c",
+    "question": "Pure water is warmed from 25 °C to 50 °C, and its pH drops to about 6.63. Is the warm water acidic?",
+    "answer_1": "Yes, because any water with a pH below 7 is acidic.",
+    "answer_2": "Yes, because warming destroys hydroxide ions, leaving excess hydronium.",
+    "answer_3": "No, because pH only measures hydroxide concentration, which stays constant.",
+    "answer_4": "No, because hydronium and hydroxide concentrations remain equal, so the water is still neutral.",
+    "correct_answer": "No, because hydronium and hydroxide concentrations remain equal, so the water is still neutral."
+  },
+  {
+    "url": "https://www.youtube.com/shorts/J5Cq_MWBn0Y",
+    "question": "According to the video, why do AP Chemistry students specifically aim for a score of 4 or 5 on the exam?",
+    "answer_1": "Because most colleges and universities accept those scores for class credit",
+    "answer_2": "Because those scores are required to enroll in an AP chemistry class the following year",
+    "answer_3": "Because only students scoring 4 or 5 are allowed to retake the exam",
+    "answer_4": "Because those scores automatically qualify students for a college scholarship",
+    "correct_answer": "Because most colleges and universities accept those scores for class credit"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/MZxf4K2mn6Y",
+    "question": "Why does the periodic table list chlorine's atomic mass as 35.45?",
+    "answer_1": "It is the weighted average of the masses of chlorine's isotopes, based on their percent abundances.",
+    "answer_2": "It is the mass of the most common chlorine atom, which has 35.45 nucleons.",
+    "answer_3": "It is the simple average of the mass numbers 35 and 37, which always equals 36.",
+    "answer_4": "It is the mass of one chlorine atom with a fractional number of protons and neutrons.",
+    "correct_answer": "It is the weighted average of the masses of chlorine's isotopes, based on their percent abundances."
+  },
+  {
+    "url": "https://www.youtube.com/shorts/rxhFsxbahkU",
+    "question": "According to the video, which of the following best describes chemical equilibrium?",
+    "answer_1": "The point at which all chemical reactions have stopped occurring entirely",
+    "answer_2": "The dynamic state in which opposing processes occur at the exact same rate",
+    "answer_3": "The capability of any substance to form a solution with any other substance",
+    "answer_4": "The condition in which a substance has given up a proton and has a low pH",
+    "correct_answer": "The dynamic state in which opposing processes occur at the exact same rate"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/J-FW2o4E8co",
+    "question": "For a reversible reaction at equilibrium, what does it mean for the forward and reverse reaction rates to be equal, and how is the direction of the next net change determined?",
+    "answer_1": "The mixture has stopped reacting; it shifts toward products if it looks crowded with reactants.",
+    "answer_2": "The forward and reverse rates are equal and concentrations stay constant, and the next net change is found by comparing Q with K: if Q is less than K, the reaction makes products.",
+    "answer_3": "The forward and reverse rates are equal, and adding a catalyst changes K so the mixture shifts toward products.",
+    "answer_4": "All particles have stopped moving; the direction is found by picking whichever side has the larger number of particles.",
+    "correct_answer": "The forward and reverse rates are equal and concentrations stay constant, and the next net change is found by comparing Q with K: if Q is less than K, the reaction makes products."
+  },
+  {
+    "url": "https://www.youtube.com/shorts/Qfc4xYuTxgE",
+    "question": "For a buffer made from a weak acid HA and its conjugate base A−, what is the pH at the half-equivalence point of a titration?",
+    "answer_1": "It equals the pKa of the acid, because the ratio [A−]/[HA] equals 1",
+    "answer_2": "It is basic, because conjugate-base hydrolysis dominates at that point",
+    "answer_3": "It is always 7, because the acid and base have neutralized each other completely",
+    "answer_4": "It is one pH unit below the pKa, because the buffer has absorbed its maximum load",
+    "correct_answer": "It equals the pKa of the acid, because the ratio [A−]/[HA] equals 1"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/hfuEuRXp3Cg",
+    "question": "A molecule can contain polar bonds yet be nonpolar overall. What determines whether the individual bond dipoles cancel out?",
+    "answer_1": "The total electronegativity difference summed across all bonds, regardless of shape",
+    "answer_2": "The molecule's geometry, since only symmetric arrangements let equal bond dipoles cancel to zero",
+    "answer_3": "The strength of the strongest single bond, which sets the molecule's net polarity",
+    "answer_4": "The number of polar bonds: three or more polar bonds always make the molecule polar",
+    "correct_answer": "The molecule's geometry, since only symmetric arrangements let equal bond dipoles cancel to zero"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/Dzfvigif1Ow",
+    "question": "In a neutral atom, how does the number of protons compare to the number of electrons?",
+    "answer_1": "The number of protons is always equal to the number of electrons.",
+    "answer_2": "The number of protons is always greater than the number of electrons.",
+    "answer_3": "The number of protons is always less than the number of electrons.",
+    "answer_4": "The number of protons is always equal to the number of neutrons.",
+    "correct_answer": "The number of protons is always equal to the number of electrons."
+  },
+  {
+    "url": "https://www.youtube.com/shorts/YfYg0rG8U_0",
+    "question": "According to the ideal gas model, what defines an 'ideal gas'?",
+    "answer_1": "A gas whose molecules have no volume and no attractions for other molecules",
+    "answer_2": "A gas whose molecules are polar and strongly attracted to one another",
+    "answer_3": "A gas that exists only at very high pressures and very low temperatures",
+    "answer_4": "A gas whose molecules are large and repel all other molecules",
+    "correct_answer": "A gas whose molecules have no volume and no attractions for other molecules"
   },
   {
     "url": "https://www.youtube.com/shorts/r5wkZlsPGMU",
@@ -43,15 +178,6 @@
     "answer_3": "It finds the average value of the function over the interval, which comes out to 39.",
     "answer_4": "It finds the maximum height the curve reaches between x = 2 and x = 5, which comes out to 39.",
     "correct_answer": "It finds the area of the yellow region under the curve between x = 2 and x = 5, which comes out to 39."
-  },
-  {
-    "url": "https://www.youtube.com/shorts/1TObGhenHYI",
-    "question": "For the derivative function f(x) = 12x with integral function G(x) = 6x², what does the Fundamental Theorem of Calculus say about the difference G(b) - G(a) = 48 (from 54 - 6)?",
-    "answer_1": "It equals the area under the derivative function f(x) = 12x between the two limit points x = a and x = b.",
-    "answer_2": "It equals the slope of the integral function G(x) = 6x² at the midpoint between the two limit points.",
-    "answer_3": "It equals the total area under the integral function G(x) = 6x² from x = 0 to x = b.",
-    "answer_4": "It equals the value of the derivative function f(x) = 12x evaluated at the upper limit point x = b.",
-    "correct_answer": "It equals the area under the derivative function f(x) = 12x between the two limit points x = a and x = b."
   },
   {
     "url": "https://www.youtube.com/shorts/IuqK-rdjalw",
@@ -72,6 +198,42 @@
     "correct_answer": "(1/2)sec²(x) + C"
   },
   {
+    "url": "https://www.youtube.com/shorts/R7sUzpskTVo",
+    "question": "According to the Fundamental Theorem of Calculus, why can the definite integral of f(x) from a to b be evaluated using only the endpoints rather than summing infinitely many pieces?",
+    "answer_1": "Because the accumulated area is an antiderivative of f(x), and knowing the area starts at zero when x = a pins down the constant, giving F(b) − F(a)",
+    "answer_2": "Because the definite integral is defined as the average value of f(x) multiplied by the length of the interval from a to b",
+    "answer_3": "Because the constant of integration cancels out when you divide the antiderivative by the width of the interval",
+    "answer_4": "Because antiderivatives are unique, so any single antiderivative evaluated at b automatically equals the accumulated area",
+    "correct_answer": "Because the accumulated area is an antiderivative of f(x), and knowing the area starts at zero when x = a pins down the constant, giving F(b) − F(a)"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/1TObGhenHYI",
+    "question": "For the derivative function f(x) = 12x with integral function G(x) = 6x², what does the Fundamental Theorem of Calculus say about the difference G(b) - G(a) = 48 (from 54 - 6)?",
+    "answer_1": "It equals the area under the derivative function f(x) = 12x between the two limit points x = a and x = b.",
+    "answer_2": "It equals the slope of the integral function G(x) = 6x² at the midpoint between the two limit points.",
+    "answer_3": "It equals the total area under the integral function G(x) = 6x² from x = 0 to x = b.",
+    "answer_4": "It equals the value of the derivative function f(x) = 12x evaluated at the upper limit point x = b.",
+    "correct_answer": "It equals the area under the derivative function f(x) = 12x between the two limit points x = a and x = b."
+  },
+  {
+    "url": "https://www.youtube.com/shorts/PouLXtDstH0",
+    "question": "According to the transcript, which areas of everyday technology rely on calculus concepts like derivatives and integrals?",
+    "answer_1": "Map navigation, battery life estimates, and rocket guidance systems",
+    "answer_2": "Social media feeds, video streaming quality, and password encryption",
+    "answer_3": "Weather forecasting, online shopping recommendations, and spam filters",
+    "answer_4": "Voice assistants, photo editing apps, and wireless charging",
+    "correct_answer": "Map navigation, battery life estimates, and rocket guidance systems"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/DH8KGzJI1_o",
+    "question": "For f(x) = x³ − 3x, setting the derivative to zero gives critical points at x = 1 and x = −1. What determines which one is a minimum?",
+    "answer_1": "The sign of the second derivative (curvature): positive at x = 1 means a minimum",
+    "answer_2": "The sign of the first derivative at x = 0: positive there means a minimum",
+    "answer_3": "The larger value of x, since x = 1 is always the minimum",
+    "answer_4": "The steepness of the first derivative, since the largest slope marks the minimum",
+    "correct_answer": "The sign of the second derivative (curvature): positive at x = 1 means a minimum"
+  },
+  {
     "url": "https://www.youtube.com/shorts/dAohzcBC32A",
     "question": "A rational function has vertical asymptotes at x = -1 and x = 3. Near x = -1, the function goes to -infinity from the left and +infinity from the right. Near x = 3, the function goes to +infinity from both the left and the right. What can be concluded about the limits?",
     "answer_1": "The limit as x approaches -1 does not exist because the left- and right-hand limits differ, while the limit as x approaches 3 is +infinity.",
@@ -88,5 +250,14 @@
     "answer_3": "x",
     "answer_4": "k/x",
     "correct_answer": "k"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/-qBymNQIIvg",
+    "question": "According to the transcript's list of derivatives you must know by heart, what is the derivative of log_e(x) (the natural logarithm of x)?",
+    "answer_1": "1/x",
+    "answer_2": "x/(ln x)",
+    "answer_3": "e^x",
+    "answer_4": "ln(x)/x",
+    "correct_answer": "1/x"
   }
 ]
