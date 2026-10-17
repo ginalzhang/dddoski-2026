@@ -29,3 +29,15 @@ The latest live input **`calculus concepts review`**, with `count=100`, returned
 - [100-result simulated benchmark](offline-100.jsonl): three runs, 2.135 seconds mean and 2.143 seconds maximum, each returning 100 results with 300 ms simulated request latency.
 
 To repeat the benchmark with your configured key, run `python -m scripts.benchmark --live --runs 1 --count 100`. This tests three topics and consumes up to 60 search calls; all daily and per-request caps still apply.
+
+## Physics questions dataset
+
+[physics-questions-100.urls.json](physics-questions-100.urls.json) contains a separate array of 100 unique, caption-confirmed Shorts with English-tagged default audio. Discovery started with `physics questions and worked solutions` (67 results in 17.761 seconds), then broadened to `physics questions` (100 results in 14.728 seconds). The verified pools were combined, deduplicated, and ranked to select 100. Total discovery execution time across both passes was 32.489 seconds. The existing calculus array was preserved.
+
+[Physics run measurements](physics-questions-100.run.json) record each pass and the language-tag distribution. As with the calculus list, English confirmation relies on YouTube's declared default audio language, captions on its availability flag, and Shorts classification on canonical routing and matching playable identity.
+
+## AP Chemistry dataset
+
+[ap-chemistry-100.urls.json](ap-chemistry-100.urls.json) contains a separate array of 100 unique, caption-confirmed Shorts with English-tagged default audio and AP Chemistry references in their titles, descriptions, or tags. Discovery searched AP Chemistry topics including atomic structure, stoichiometry, equilibrium, acids and bases, thermodynamics, kinetics, bonding, electrochemistry, and solutions. The live run reached 100 results in 14.581 seconds using nine searches, six metadata batches, and 135 candidate page checks.
+
+[AP Chemistry run measurements](ap-chemistry-100.run.json) record the counts and language-tag distribution. The same metadata and Shorts-page checks apply; course relevance is based on public metadata, not an independent review against the AP syllabus.

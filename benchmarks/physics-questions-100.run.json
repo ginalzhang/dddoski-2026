@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-16",
+  "mode": "live YouTube",
+  "prompt": "physics questions",
+  "target_count": 100,
+  "result_count": 100,
+  "passes": [
+    {
+      "prompt": "physics questions and worked solutions",
+      "elapsed_seconds": 17.761,
+      "count": 67,
+      "search_calls": 20,
+      "metadata_calls": 14,
+      "verified_candidates_attempted": 88
+    },
+    {
+      "prompt": "physics questions",
+      "elapsed_seconds": 14.728,
+      "count": 100,
+      "search_calls": 8,
+      "metadata_calls": 7,
+      "verified_candidates_attempted": 131
+    }
+  ],
+  "discovery_execution_seconds": 32.489,
+  "all_captions_confirmed": true,
+  "all_urls_unique": true,
+  "all_default_audio_declared_english": true,
+  "audio_language_counts": {
+    "en": 59,
+    "en-IN": 17,
+    "en-US": 21,
+    "en-GB": 3
+  },
+  "shorts_verification": "YouTube canonical Shorts route and matching playable player response",
+  "results_file": "physics-questions-100.urls.json"
+}
