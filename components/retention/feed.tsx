@@ -24,10 +24,6 @@ const SWIPE_VELOCITY = 600;
 
 // Card size: as tall as the viewport allows (minus header and padding),
 // capped so it stays a phone-sized object on a projector.
-function isDemo() {
-    return typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('demo');
-}
-
 const STAGE_SIZE = 'aspect-[9/16] w-[min(calc((100dvh-8.75rem)*9/16),calc(100vw-7.5rem),30rem)]';
 
 export function Feed() {
@@ -306,9 +302,8 @@ export function Feed() {
                 setCommentsOpen(true);
                 break;
             case 'e':
-                // Shift+E jumps to the end so you don't have to sit through it.
-                // Dev builds, or any build opened with ?demo=1 (for live demos).
-                if (e.shiftKey && (process.env.NODE_ENV === 'development' || isDemo())) player()?.devSkipToEnd();
+                // Shift+E jumps to the end so you don't have to sit through it (demo shortcut).
+                if (e.shiftKey) player()?.devSkipToEnd();
                 break;
         }
     });
