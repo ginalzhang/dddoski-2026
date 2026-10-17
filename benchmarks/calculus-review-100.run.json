@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-16",
+  "mode": "live YouTube",
+  "prompt": "calculus concepts review",
+  "target_count": 100,
+  "result_count": 100,
+  "elapsed_seconds": 18.03,
+  "deadline_seconds": 28,
+  "search_calls": 8,
+  "metadata_calls": 7,
+  "verified_candidates_attempted": 197,
+  "http_concurrency": 24,
+  "all_captions_confirmed": true,
+  "all_urls_unique": true,
+  "all_default_audio_declared_english": true,
+  "audio_language_counts": {
+    "en-GB": 4,
+    "en": 47,
+    "en-US": 46,
+    "en-IN": 2,
+    "en-AU": 1
+  },
+  "language_verification": "YouTube snippet.defaultAudioLanguage; missing or non-English rejected; no independent audio analysis",
+  "shorts_verification": "YouTube canonical Shorts route and matching playable player response",
+  "results_file": "calculus-review-100.urls.json"
+}

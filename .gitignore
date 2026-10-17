@@ -44,3 +44,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 !.env.example
+
+# Python project
+.venv/
+__pycache__/
+*.py[cod]
+.cache/
+*.egg-info/
+.coverage

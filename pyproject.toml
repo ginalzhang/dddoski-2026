@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shorts-discovery"
+version = "0.1.0"
+description = "Deadline-bounded discovery of relevant, captioned YouTube Shorts"
+requires-python = ">=3.9"
+dependencies = ["httpx>=0.27,<0.29", "fastapi>=0.115,<0.129", "uvicorn>=0.30,<0.40"]
+
+[tool.setuptools.packages.find]
+include = ["shorts_discovery*"]
